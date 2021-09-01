@@ -14,7 +14,7 @@ echo -e "\e[01;37mColoque a PORTA que deseja utilizar\e[0m"
  read -p "Porta(s): " PORTA
 read -n1 -p "$a" proprio
 case $proprio in
-     s|S) echo -e "\e[01;37mColoque o seu DOMÍNIO\e[0m"
+     s|S) echo -e "\n\e[01;37mColoque o seu DOMÍNIO\e[0m"
           read -p "Domínio: " DOMINIO
           ;;
      n|N) dominios="sg.serverkit.me 
