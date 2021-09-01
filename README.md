@@ -5,4 +5,4 @@
 </br>também é possivel testar listas, seja de proxys ou portas</p>
 <code>git clone https://github.com/M4tiass/testproxy && cd subdomainCDN && chmod +x scan && ./scan</code>
 
-<a href="https://t.me/medroso">TELEGRAM</a>
+<p>my <a href="https://t.me/medroso">Telegram</a> :P</p>
