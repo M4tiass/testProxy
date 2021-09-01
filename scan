@@ -41,7 +41,7 @@ portas=$(grep -o ',' <<< "$PORTA" | echo $(($(wc -l)+1)))
   porta=$(cut -d ',' -f$i <<< "$PORTA")
       for i in $(seq "$ips"); do
        ip=$(cut -d ',' -f$i <<< "$IP")
-          try=$(curl -m 3 -s -o /dev/null -w "%{http_code}" $DOMINIO -H "Upgrade: websocket" -x $ip:$porta)
+          try=$(curl -m 5 -s -o /dev/null -w "%{http_code}" $DOMINIO -H "Upgrade: websocket" -x $ip:$porta)
             eval "case $try in
                  $nums\ )
                       echo -e \"\e[01;33m$ip:$porta\e[0m | \e[01;37mIP OK - STATUS $try\e[0m\"
