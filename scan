@@ -39,6 +39,7 @@ portas=$(grep -o ',' <<< "$PORTA" | echo $(($(wc -l)+1)))
 
  for i in $(seq "$portas"); do
   porta=$(cut -d ',' -f$i <<< "$PORTA")
+  case $porta in 80) time=3;; 443) time=5;; *) time=4; esac
       for i in $(seq "$ips"); do
        ip=$(cut -d ',' -f$i <<< "$IP")
           try=$(curl -m 5 -s -o /dev/null -w "%{http_code}" $DOMINIO -H "Upgrade: websocket" -x $ip:$porta)
